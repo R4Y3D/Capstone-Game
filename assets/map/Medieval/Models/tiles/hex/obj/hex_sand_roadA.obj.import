@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://l7dn11jujhar"
+path="res://.godot/imported/hex_sand_roadA.obj-16a5e22d5db15db2595b360879264d73.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_sand_roadA.obj-16a5e22d5db15db2595b360879264d73.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/hex/obj/hex_sand_roadA.obj"
+dest_files=["res://.godot/imported/hex_sand_roadA.obj-16a5e22d5db15db2595b360879264d73.mesh", "res://.godot/imported/hex_sand_roadA.obj-16a5e22d5db15db2595b360879264d73.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

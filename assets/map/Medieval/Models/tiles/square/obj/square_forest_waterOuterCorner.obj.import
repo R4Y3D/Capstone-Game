@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://biqqy37vio8rf"
+path="res://.godot/imported/square_forest_waterOuterCorner.obj-4fc6d57a294973c87f64af0ab40a4341.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_forest_waterOuterCorner.obj-4fc6d57a294973c87f64af0ab40a4341.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/square/obj/square_forest_waterOuterCorner.obj"
+dest_files=["res://.godot/imported/square_forest_waterOuterCorner.obj-4fc6d57a294973c87f64af0ab40a4341.mesh", "res://.godot/imported/square_forest_waterOuterCorner.obj-4fc6d57a294973c87f64af0ab40a4341.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

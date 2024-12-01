@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://de2tj7tlnopy1"
+path="res://.godot/imported/hex_forest_waterD_detail.obj-1349fc96f43b0f04b2ad2a9dd5a4f654.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_forest_waterD_detail.obj-1349fc96f43b0f04b2ad2a9dd5a4f654.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/hex/obj/hex_forest_waterD_detail.obj"
+dest_files=["res://.godot/imported/hex_forest_waterD_detail.obj-1349fc96f43b0f04b2ad2a9dd5a4f654.mesh", "res://.godot/imported/hex_forest_waterD_detail.obj-1349fc96f43b0f04b2ad2a9dd5a4f654.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

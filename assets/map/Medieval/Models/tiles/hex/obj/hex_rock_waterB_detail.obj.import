@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkm1bk8pxjpoi"
+path="res://.godot/imported/hex_rock_waterB_detail.obj-3c0de3fbb703e11e3fe2997c1cee869b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_rock_waterB_detail.obj-3c0de3fbb703e11e3fe2997c1cee869b.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/hex/obj/hex_rock_waterB_detail.obj"
+dest_files=["res://.godot/imported/hex_rock_waterB_detail.obj-3c0de3fbb703e11e3fe2997c1cee869b.mesh", "res://.godot/imported/hex_rock_waterB_detail.obj-3c0de3fbb703e11e3fe2997c1cee869b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

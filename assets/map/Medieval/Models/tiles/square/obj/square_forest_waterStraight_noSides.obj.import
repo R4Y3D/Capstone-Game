@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ujdsbqtoxfua"
+path="res://.godot/imported/square_forest_waterStraight_noSides.obj-633fdff48ad1a37704e8a26e27bae892.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_forest_waterStraight_noSides.obj-633fdff48ad1a37704e8a26e27bae892.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/square/obj/square_forest_waterStraight_noSides.obj"
+dest_files=["res://.godot/imported/square_forest_waterStraight_noSides.obj-633fdff48ad1a37704e8a26e27bae892.mesh", "res://.godot/imported/square_forest_waterStraight_noSides.obj-633fdff48ad1a37704e8a26e27bae892.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

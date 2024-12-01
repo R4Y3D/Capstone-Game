@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ycofoncbis64"
+path="res://.godot/imported/square_forest.obj-44cb040bcd8f14069a1fed35a4af5168.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_forest.obj-44cb040bcd8f14069a1fed35a4af5168.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/square/obj/square_forest.obj"
+dest_files=["res://.godot/imported/square_forest.obj-44cb040bcd8f14069a1fed35a4af5168.mesh", "res://.godot/imported/square_forest.obj-44cb040bcd8f14069a1fed35a4af5168.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

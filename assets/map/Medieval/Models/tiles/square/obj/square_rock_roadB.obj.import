@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgyy5juhd7msd"
+path="res://.godot/imported/square_rock_roadB.obj-b72d87d814ef14d8401d8343c37349a1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_rock_roadB.obj-b72d87d814ef14d8401d8343c37349a1.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/square/obj/square_rock_roadB.obj"
+dest_files=["res://.godot/imported/square_rock_roadB.obj-b72d87d814ef14d8401d8343c37349a1.mesh", "res://.godot/imported/square_rock_roadB.obj-b72d87d814ef14d8401d8343c37349a1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3wa3qnp2l2xu"
+path="res://.godot/imported/square_sand_roadC.obj-1de3b649212d593a133adbe589ed5276.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_sand_roadC.obj-1de3b649212d593a133adbe589ed5276.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/square/obj/square_sand_roadC.obj"
+dest_files=["res://.godot/imported/square_sand_roadC.obj-1de3b649212d593a133adbe589ed5276.mesh", "res://.godot/imported/square_sand_roadC.obj-1de3b649212d593a133adbe589ed5276.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

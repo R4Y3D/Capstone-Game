@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csalm2k7ibwrc"
+path="res://.godot/imported/path_C.obj-0d56247d7e895246b16727da873801eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/path_C.obj-0d56247d7e895246b16727da873801eb.mesh"]
+
+source_file="res://assets/map/Halloween/Assets/obj/path_C.obj"
+dest_files=["res://.godot/imported/path_C.obj-0d56247d7e895246b16727da873801eb.mesh", "res://.godot/imported/path_C.obj-0d56247d7e895246b16727da873801eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

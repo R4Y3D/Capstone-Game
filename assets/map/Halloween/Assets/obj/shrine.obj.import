@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvdohyao2o4kf"
+path="res://.godot/imported/shrine.obj-c838bf4dc01de218843199de66aa9b4a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shrine.obj-c838bf4dc01de218843199de66aa9b4a.mesh"]
+
+source_file="res://assets/map/Halloween/Assets/obj/shrine.obj"
+dest_files=["res://.godot/imported/shrine.obj-c838bf4dc01de218843199de66aa9b4a.mesh", "res://.godot/imported/shrine.obj-c838bf4dc01de218843199de66aa9b4a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

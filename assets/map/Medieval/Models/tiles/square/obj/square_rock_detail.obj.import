@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bi2dpiveprgfk"
+path="res://.godot/imported/square_rock_detail.obj-348dff633fc6d55598dcbbb2d60c578a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_rock_detail.obj-348dff633fc6d55598dcbbb2d60c578a.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/square/obj/square_rock_detail.obj"
+dest_files=["res://.godot/imported/square_rock_detail.obj-348dff633fc6d55598dcbbb2d60c578a.mesh", "res://.godot/imported/square_rock_detail.obj-348dff633fc6d55598dcbbb2d60c578a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

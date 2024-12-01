@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcqcw264oapib"
+path="res://.godot/imported/hex_rock_roadF_detail.obj-534604abaca8e07f4d786a67021d8505.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_rock_roadF_detail.obj-534604abaca8e07f4d786a67021d8505.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/hex/obj/hex_rock_roadF_detail.obj"
+dest_files=["res://.godot/imported/hex_rock_roadF_detail.obj-534604abaca8e07f4d786a67021d8505.mesh", "res://.godot/imported/hex_rock_roadF_detail.obj-534604abaca8e07f4d786a67021d8505.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

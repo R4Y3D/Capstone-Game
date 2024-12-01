@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7fnjwan30i5c"
+path="res://.godot/imported/candle_melted.obj-67f40ae0d98a35e98c292a3c8679a47d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/candle_melted.obj-67f40ae0d98a35e98c292a3c8679a47d.mesh"]
+
+source_file="res://assets/map/Halloween/Assets/obj/candle_melted.obj"
+dest_files=["res://.godot/imported/candle_melted.obj-67f40ae0d98a35e98c292a3c8679a47d.mesh", "res://.godot/imported/candle_melted.obj-67f40ae0d98a35e98c292a3c8679a47d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

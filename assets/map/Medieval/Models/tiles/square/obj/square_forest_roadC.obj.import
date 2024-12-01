@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d157goiymis6i"
+path="res://.godot/imported/square_forest_roadC.obj-b4d32e687839b8c4ffd21a75df074238.mesh"
+
+[deps]
+
+files=["res://.godot/imported/square_forest_roadC.obj-b4d32e687839b8c4ffd21a75df074238.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/square/obj/square_forest_roadC.obj"
+dest_files=["res://.godot/imported/square_forest_roadC.obj-b4d32e687839b8c4ffd21a75df074238.mesh", "res://.godot/imported/square_forest_roadC.obj-b4d32e687839b8c4ffd21a75df074238.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dsg47jt1efejt"
+path="res://.godot/imported/mine.obj-cc97e17523744db213c13d7983e7e349.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mine.obj-cc97e17523744db213c13d7983e7e349.mesh"]
+
+source_file="res://assets/map/Medieval/Models/objects/obj/mine.obj"
+dest_files=["res://.godot/imported/mine.obj-cc97e17523744db213c13d7983e7e349.mesh", "res://.godot/imported/mine.obj-cc97e17523744db213c13d7983e7e349.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

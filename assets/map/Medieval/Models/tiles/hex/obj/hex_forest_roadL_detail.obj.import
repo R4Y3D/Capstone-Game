@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://diifirq3yqbir"
+path="res://.godot/imported/hex_forest_roadL_detail.obj-c644433c4a3390232e54ab003b895d46.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_forest_roadL_detail.obj-c644433c4a3390232e54ab003b895d46.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/hex/obj/hex_forest_roadL_detail.obj"
+dest_files=["res://.godot/imported/hex_forest_roadL_detail.obj-c644433c4a3390232e54ab003b895d46.mesh", "res://.godot/imported/hex_forest_roadL_detail.obj-c644433c4a3390232e54ab003b895d46.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

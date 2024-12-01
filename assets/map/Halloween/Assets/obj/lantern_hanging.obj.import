@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ff3by02s0xdv"
+path="res://.godot/imported/lantern_hanging.obj-96bf4161ec63e70ab2421224f5cf2b4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lantern_hanging.obj-96bf4161ec63e70ab2421224f5cf2b4f.mesh"]
+
+source_file="res://assets/map/Halloween/Assets/obj/lantern_hanging.obj"
+dest_files=["res://.godot/imported/lantern_hanging.obj-96bf4161ec63e70ab2421224f5cf2b4f.mesh", "res://.godot/imported/lantern_hanging.obj-96bf4161ec63e70ab2421224f5cf2b4f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

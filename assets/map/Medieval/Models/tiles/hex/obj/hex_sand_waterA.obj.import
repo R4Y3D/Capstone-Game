@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wppryx120hib"
+path="res://.godot/imported/hex_sand_waterA.obj-c487485db1b38a6ee8b874a5db3cd64d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hex_sand_waterA.obj-c487485db1b38a6ee8b874a5db3cd64d.mesh"]
+
+source_file="res://assets/map/Medieval/Models/tiles/hex/obj/hex_sand_waterA.obj"
+dest_files=["res://.godot/imported/hex_sand_waterA.obj-c487485db1b38a6ee8b874a5db3cd64d.mesh", "res://.godot/imported/hex_sand_waterA.obj-c487485db1b38a6ee8b874a5db3cd64d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

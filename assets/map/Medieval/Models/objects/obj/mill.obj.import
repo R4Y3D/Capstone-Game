@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dr8brv5qthgnk"
+path="res://.godot/imported/mill.obj-5e1e3f2351b0ab04525b4a12f6428cf7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mill.obj-5e1e3f2351b0ab04525b4a12f6428cf7.mesh"]
+
+source_file="res://assets/map/Medieval/Models/objects/obj/mill.obj"
+dest_files=["res://.godot/imported/mill.obj-5e1e3f2351b0ab04525b4a12f6428cf7.mesh", "res://.godot/imported/mill.obj-5e1e3f2351b0ab04525b4a12f6428cf7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
