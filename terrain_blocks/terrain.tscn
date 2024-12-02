@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://cli63st748qba"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lgqp0"]
+size = Vector2(100, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k2f8f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m7pw0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jki4m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_slu1b"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_owv0n"]
+data = PackedVector3Array(50, 0, 10, -50, 0, 10, 50, 0, -10, -50, 0, 10, -50, 0, -10, 50, 0, -10)
+
+[node name="Terrain" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0129557, -0.151224, -8.90989)
+mesh = SubResource("PlaneMesh_lgqp0")
+
+[node name="Block" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block"]
+shape = SubResource("BoxShape3D_k2f8f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block"]
+mesh = SubResource("BoxMesh_m7pw0")
+
+[node name="Block2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.01973, 0.5, -0.711035)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block2"]
+shape = SubResource("BoxShape3D_k2f8f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block2"]
+mesh = SubResource("BoxMesh_m7pw0")
+
+[node name="Block3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03439, 0.5, -2.77892)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block3"]
+shape = SubResource("BoxShape3D_k2f8f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block3"]
+mesh = SubResource("BoxMesh_m7pw0")
+
+[node name="Block4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9987, 0.5, -6.57294)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block4"]
+shape = SubResource("BoxShape3D_jki4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block4"]
+mesh = SubResource("BoxMesh_slu1b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_owv0n")
