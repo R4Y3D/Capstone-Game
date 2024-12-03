@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://du5bhnakh611"]
+[gd_scene load_steps=11 format=3 uid="uid://du5bhnakh611"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_hhrhj"]
 [ext_resource type="PackedScene" uid="uid://bsn3mj85vxh21" path="res://scenes/maps/HalloweenForest.tscn" id="2_gva57"]
 [ext_resource type="PackedScene" uid="uid://b8oie4cejofkp" path="res://scenes/maps/SummerForest.tscn" id="3_o7cva"]
 [ext_resource type="PackedScene" uid="uid://cofp3h0x7nggg" path="res://scenes/maps/SummerPlatform.tscn" id="4_diqd3"]
 [ext_resource type="PackedScene" uid="uid://b6gtkh4g8k4ue" path="res://scenes/maps/YellowRoad.tscn" id="5_2aos5"]
+[ext_resource type="PackedScene" uid="uid://xumui7di542x" path="res://player.tscn" id="6_sewca"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s6phg"]
 
@@ -49,3 +50,5 @@ camera_attributes = SubResource("CameraAttributesPractical_cvpgu")
 transform = Transform3D(0.695587, 3.14041e-08, -0.718442, 0.718442, -3.04051e-08, 0.695587, -5.05855e-15, -1, -4.37114e-08, 0, 17.4774, 0)
 light_color = Color(0.984314, 0.933333, 0.431373, 1)
 shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("6_sewca")]
