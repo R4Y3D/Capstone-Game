@@ -1,0 +1,17 @@
+newmtl t00+CullBackface
+map_Kd t00.png
+
+newmtl t01
+map_Kd t01.png
+
+newmtl t02
+map_Kd t02.png
+
+newmtl t04+AlphaBlend+CullBackface
+map_Kd t04.png
+
+newmtl t05+CullBackface
+map_Kd t05.png
+
+newmtl t07+CullBackface
+map_Kd t07.png

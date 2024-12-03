@@ -1,0 +1,11 @@
+newmtl t00+CullBackface
+map_Kd t00.png
+
+newmtl t01
+map_Kd t01.png
+
+newmtl t04+CullBackface
+map_Kd t04.png
+
+newmtl t05+CullBackface
+map_Kd t05.png

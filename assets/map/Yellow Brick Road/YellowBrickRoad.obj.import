@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhe3jlf44l5ft"
+path="res://.godot/imported/YellowBrickRoad.obj-2be46ca8df1f5f97b3b3a19c2cf16135.mesh"
+
+[deps]
+
+files=["res://.godot/imported/YellowBrickRoad.obj-2be46ca8df1f5f97b3b3a19c2cf16135.mesh"]
+
+source_file="res://assets/map/Yellow Brick Road/YellowBrickRoad.obj"
+dest_files=["res://.godot/imported/YellowBrickRoad.obj-2be46ca8df1f5f97b3b3a19c2cf16135.mesh", "res://.godot/imported/YellowBrickRoad.obj-2be46ca8df1f5f97b3b3a19c2cf16135.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
