@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0jtv58yf0q4"
-path.s3tc="res://.godot/imported/skeleton_texture.png-3d3010e097b1ecc85a904d436ce2c185.s3tc.ctex"
+uid="uid://c0am7e010kt1g"
+path.s3tc="res://.godot/imported/t00.png-0aa38850bcbdb505c24154e50bf1ce31.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/enemies/assets/obj/skeleton_texture.png"
-dest_files=["res://.godot/imported/skeleton_texture.png-3d3010e097b1ecc85a904d436ce2c185.s3tc.ctex"]
+source_file="res://assets/map/Yellow Brick Road/t00.png"
+dest_files=["res://.godot/imported/t00.png-0aa38850bcbdb505c24154e50bf1ce31.s3tc.ctex"]
 
 [params]
 

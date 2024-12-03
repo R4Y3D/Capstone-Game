@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0jtv58yf0q4"
-path.s3tc="res://.godot/imported/skeleton_texture.png-3d3010e097b1ecc85a904d436ce2c185.s3tc.ctex"
+uid="uid://x2f8sg2r6i6w"
+path.s3tc="res://.godot/imported/t08.png-1cdf4e98b6399d19230b5a71ffe4014b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/enemies/assets/obj/skeleton_texture.png"
-dest_files=["res://.godot/imported/skeleton_texture.png-3d3010e097b1ecc85a904d436ce2c185.s3tc.ctex"]
+source_file="res://assets/map/Summer Forest/t08.png"
+dest_files=["res://.godot/imported/t08.png-1cdf4e98b6399d19230b5a71ffe4014b.s3tc.ctex"]
 
 [params]
 
