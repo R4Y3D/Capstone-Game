@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://whbwaf2k5mkk"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_qxyig"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_42jyh"]
+radius = 0.30109
+
+[node name="Player" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.302861, 0)
+script = ExtResource("1_qxyig")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CharacterBody3D"]
+use_collision = true
+radius = 0.301975
+smooth_faces = false
+
+[node name="FollowPlayer" type="Marker3D" parent="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("SphereShape3D_42jyh")

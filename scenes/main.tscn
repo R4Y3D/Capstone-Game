@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://du5bhnakh611"]
+[gd_scene load_steps=10 format=3 uid="uid://du5bhnakh611"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_hhrhj"]
 [ext_resource type="PackedScene" uid="uid://bsn3mj85vxh21" path="res://scenes/maps/HalloweenForest.tscn" id="2_gva57"]
-[ext_resource type="PackedScene" uid="uid://b8oie4cejofkp" path="res://scenes/maps/SummerForest.tscn" id="3_o7cva"]
-[ext_resource type="PackedScene" uid="uid://cofp3h0x7nggg" path="res://scenes/maps/SummerPlatform.tscn" id="4_diqd3"]
+[ext_resource type="PackedScene" uid="uid://whbwaf2k5mkk" path="res://scenes/Player.tscn" id="4_8h6l0"]
 [ext_resource type="PackedScene" uid="uid://b6gtkh4g8k4ue" path="res://scenes/maps/YellowRoad.tscn" id="5_2aos5"]
-[ext_resource type="PackedScene" uid="uid://xumui7di542x" path="res://player.tscn" id="6_sewca"]
+[ext_resource type="PackedScene" uid="uid://b6spi67wkwmiy" path="res://scenes/Knight.tscn" id="5_s6hv4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s6phg"]
 
@@ -37,7 +36,7 @@ dof_blur_far_transition = 70.0
 
 [node name="Level" type="Node3D" parent="."]
 script = ExtResource("1_hhrhj")
-modules = Array[PackedScene]([ExtResource("2_gva57"), ExtResource("3_o7cva"), ExtResource("4_diqd3"), ExtResource("5_2aos5")])
+modules = Array[PackedScene]([ExtResource("2_gva57"), ExtResource("5_2aos5")])
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0.642788, -0.766044, 0, 0.766044, 0.642788, 1, 2.80971e-08, -3.34849e-08, 0, 6.84937, 0)
@@ -51,4 +50,11 @@ transform = Transform3D(0.695587, 3.14041e-08, -0.718442, 0.718442, -3.04051e-08
 light_color = Color(0.984314, 0.933333, 0.431373, 1)
 shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("6_sewca")]
+[node name="Player" parent="." instance=ExtResource("4_8h6l0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38226, 0, 0)
+
+[node name="Knight" parent="." instance=ExtResource("5_s6hv4")]
+transform = Transform3D(0.473887, 0, 0, 0, 0.473887, 0, 0, 0, 0.473887, 0, 0, 0)
+
+[node name="Knight2" parent="." instance=ExtResource("5_s6hv4")]
+transform = Transform3D(0.473887, 0, 0, 0, 0.473887, 0, 0, 0, 0.473887, -1.44353, 0, 0)

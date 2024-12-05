@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bsn3mj85vxh21"]
+[gd_scene load_steps=14 format=4 uid="uid://bsn3mj85vxh21"]
 
 [ext_resource type="Texture2D" uid="uid://6nthibaifp1i" path="res://assets/map/Autumn Halloween/t00.png" id="1_4q6ag"]
 [ext_resource type="Script" path="res://scenes/maps/map.gd" id="1_prt62"]
@@ -86,6 +86,10 @@ size = Vector3(4.76416, 9.27637, 16.962)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_d17br"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_wajcy"]
+vertices = PackedVector3Array(5.49983, -0.0119638, 1.79051, 5.49983, -0.0119638, 1.04051, 4.24983, -0.0119638, -0.459485, -0.500174, -0.0119638, 5.04051, -2.75017, -0.0119638, -13.2095, -3.50017, -0.0119638, -13.2095, -9.00017, -0.0119638, -9.95949)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 2), PackedInt32Array(6, 2, 3)]
+
 [node name="HalloweenForest" type="Node3D"]
 script = ExtResource("1_prt62")
 
@@ -109,3 +113,22 @@ shape = SubResource("BoxShape3D_mrsaj")
 
 [node name="floor" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_d17br")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -4.25243, 0.00503376, -0.306789)
+navigation_mesh = SubResource("NavigationMesh_wajcy")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, -1.6311, -1.01196, -4.15104)
+visible = false
+size = Vector3(7.98332, 1, 18.0424)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(9.48612e-08, -0.866026, 0.500001, 1, -4.37114e-08, -2.38419e-07, 1.86121e-07, 0.500001, 0.866026, -5.43935, 2.55102, -2.04225)
+visible = false
+size = Vector3(7.10916, 0.168457, 16.9515)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(9.48612e-08, -0.866026, 0.500001, 1, -4.37114e-08, -2.38419e-07, 1.86121e-07, 0.500001, 0.866026, 1.99091, 2.55102, -6.33212)
+visible = false
+size = Vector3(7.10916, 0.168457, 16.9515)

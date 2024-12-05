@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://b6gtkh4g8k4ue"]
+[gd_scene load_steps=18 format=4 uid="uid://b6gtkh4g8k4ue"]
 
 [ext_resource type="Script" path="res://scenes/maps/map.gd" id="1_b8mvo"]
 [ext_resource type="Texture2D" uid="uid://hb46yiw27h7i" path="res://assets/map/Yellow Brick Road/t05.png" id="1_ly478"]
@@ -114,6 +114,10 @@ albedo_texture = ExtResource("3_lojae")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_meftu"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_iu3i1"]
+vertices = PackedVector3Array(1.21874, -0.00527716, 8.20258, 1.71874, -0.00527716, 8.45258, 7.21874, -0.00527716, 5.20258, -5.03126, -0.00527716, -16.2974, -10.7813, -0.00527716, -13.0474)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4)]
+
 [node name="YellowRoad" type="Node3D"]
 script = ExtResource("1_b8mvo")
 
@@ -155,3 +159,22 @@ transform = Transform3D(-0.469368, 0.26584, 1.54051, -0.0173282, 1.88251, -0.241
 material_override = SubResource("StandardMaterial3D_1kaia")
 cast_shadow = 2
 mesh = SubResource("PlaneMesh_e2l1l")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -4.25243, 0.00503376, -0.306789)
+navigation_mesh = SubResource("NavigationMesh_iu3i1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866026, -1.73395, -1.00528, -3.9215)
+visible = false
+size = Vector3(7.57565, 1, 25.4728)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(9.48612e-08, -0.866026, 0.500001, 1, -4.37114e-08, -2.38419e-07, 1.86121e-07, 0.500001, 0.866026, -5.34012, 2.55102, -1.81447)
+visible = false
+size = Vector3(7.10916, 0.168457, 25.4728)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(9.48612e-08, -0.866026, 0.500001, 1, -4.37114e-08, -2.38419e-07, 1.86121e-07, 0.500001, 0.866026, 1.74776, 2.55102, -5.95649)
+visible = false
+size = Vector3(7.10916, 0.168457, 25.5161)
