@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://du5bhnakh611"]
+[gd_scene load_steps=15 format=3 uid="uid://du5bhnakh611"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_hhrhj"]
 [ext_resource type="PackedScene" uid="uid://bsn3mj85vxh21" path="res://scenes/maps/HalloweenForest.tscn" id="2_gva57"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://scenes/gate_manager.gd" id="6_wi0xa"]
 [ext_resource type="PackedScene" uid="uid://bfhhacfdfuoe2" path="res://gate.tscn" id="7_un5mp"]
 [ext_resource type="PackedScene" uid="uid://c1o164nt7auus" path="res://Skeleton.tscn" id="8_i77ov"]
+[ext_resource type="PackedScene" uid="uid://cjst0ebcp6fje" path="res://skeleton_mage.tscn" id="9_ck2mo"]
+[ext_resource type="Script" path="res://spawner.gd" id="10_5hu2a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s6phg"]
 
@@ -74,3 +76,11 @@ transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 204.412, 0, 0)
 
 [node name="Skeleton3" parent="." instance=ExtResource("8_i77ov")]
 transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 18.2785, 0, 0)
+
+[node name="Skeleton_Mage" parent="." instance=ExtResource("9_ck2mo")]
+transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 29.9624, 0, 0)
+
+[node name="Spawner" type="Node3D" parent="."]
+script = ExtResource("10_5hu2a")
+mage_scene = ExtResource("9_ck2mo")
+minion_scene = ExtResource("8_i77ov")
