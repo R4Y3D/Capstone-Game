@@ -12,6 +12,11 @@ func _ready():
 	spawn_gates()  # Spawn the initial gates
 	start_speed_timer()  # Start the timer to increase speed
 
+func test(ispositive, effect_value):
+	prints('signal triggered', ispositive, effect_value)
+
+@onready var spawner: Node3D = $"../Spawner"
+
 func spawn_gates():
 	# Spawn a positive gate
 	var positive_gate = gate_scene.instantiate()
@@ -19,7 +24,7 @@ func spawn_gates():
 	positive_gate.is_positive = true
 	positive_gate.speed = gate_speed  # Pass the current global speed
 	add_child(positive_gate)
-
+	positive_gate.gate_activated.connect(spawner._spawn_Knight)
 	# Spawn a negative gate
 	var negative_gate = gate_scene.instantiate()
 	negative_gate.global_transform.origin = Vector3(spawn_distance, 1.0, -gate_spacing)

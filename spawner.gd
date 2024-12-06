@@ -17,7 +17,8 @@ func _ready():
 	timer.autostart = true
 	timer.timeout.connect(_spawn_skeleton)  # Corrected signal connection
 	add_child(timer)
-
+func _spawn_Knight(is_positive, effect_value): 
+	print(is_positive, effect_value)
 func _spawn_skeleton():
 	if current_spawn_count >= max_spawn_count:
 		print("Max spawn count reached.")
@@ -36,5 +37,6 @@ func _spawn_skeleton():
 		skeleton.global_transform.origin = spawn_position
 		add_child(skeleton)  # Add skeleton to the spawner node or change to appropriate parent
 		print("Spawned skeleton at:", spawn_position)
+		
 
 	current_spawn_count += 1
