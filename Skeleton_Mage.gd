@@ -63,7 +63,7 @@ func _physics_process(delta: float):
 	# Check if the skeleton is moving or idle
 	if velocity.length() > 0:  # Skeleton is moving
 		if animation_player and animation_player.current_animation != "Walking_A":
-			animation_player.play("Walking_A")
+			animation_player.play("Running_B")
 	else:  # Skeleton is idle
 		if animation_player and animation_player.current_animation != "Walking_B":
 			animation_player.play("Walking_B")

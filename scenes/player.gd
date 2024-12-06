@@ -6,10 +6,6 @@ extends CharacterBody3D
 
 func _process(delta: float):
 	var input_dir = Vector3.ZERO
-	if Input.is_action_pressed("up"):
-		input_dir.x += 1
-	if Input.is_action_pressed("down"):
-		input_dir.x -= 1
 	if Input.is_action_pressed("left"):
 		input_dir.z -= 1
 	if Input.is_action_pressed("right"):
