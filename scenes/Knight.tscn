@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l85cf"]
 radius = 0.630659
-height = 2.70877
+height = 2.39426
 
 [node name="Knight" type="Node3D"]
 
