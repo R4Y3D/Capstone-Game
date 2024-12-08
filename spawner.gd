@@ -23,17 +23,16 @@ func _spawn_Knight(is_positive, effect_value):
 	if is_positive:
 		print("Duplicating knight with effect value:", effect_value)
 
-		# Find an existing knight in the scene
-		var existing_knight = get_tree().get_first_node_in_group("knight")
-		if existing_knight:
-			# Spawn the new knight at the existing knight's position with a slight offset
-			var spawn_position = existing_knight.global_transform.origin + Vector3(2, 0, 0)  # Offset by 2 units on the X-axis
-			var new_knight = knight_scene.instantiate()
-			new_knight.global_transform.origin = spawn_position
-			add_child(new_knight)
-			print("Knight spawned at:", spawn_position)
-		else:
-			print("No existing knight found; cannot spawn new knight.")
+		# Spawn the new knight at the fixed position (0, 0, 0)
+		var spawn_position = Vector3(-20, 0, 0)
+		var new_knight = knight_scene.instantiate()
+		new_knight.global_transform.origin = spawn_position
+
+		
+		
+		
+		add_child(new_knight)
+		print("Knight spawned at fixed position:", spawn_position)
 	else:
 		print("Removing a knight with effect value:", effect_value)
 		# Remove a knight
