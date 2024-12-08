@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1o164nt7auus"]
+[gd_scene load_steps=5 format=3 uid="uid://c1o164nt7auus"]
 
 [ext_resource type="Script" path="res://Skeleton.gd" id="1_jgmut"]
 [ext_resource type="PackedScene" uid="uid://bp6prjb0a1v6q" path="res://assets/enemies/characters/fbx/Skeleton_Minion.fbx" id="2_3ttmp"]
@@ -6,6 +6,10 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l85cf"]
 radius = 0.630659
 height = 2.39426
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7rwhp"]
+radius = 0.265105
+height = 1.43416
 
 [node name="Skeleton" type="Node3D"]
 
@@ -17,6 +21,12 @@ script = ExtResource("1_jgmut")
 [node name="Skeleton_Minion" parent="CharacterBody3D" instance=ExtResource("2_3ttmp")]
 transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, -0.036773, 1.00073, 0.28777)
+[node name="Area3D" type="Area3D" parent="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/Area3D"]
+transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 0.167756, 0.606547, 0.28777)
 shape = SubResource("CapsuleShape3D_l85cf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0189002, 0.37659, 0)
+shape = SubResource("CapsuleShape3D_7rwhp")

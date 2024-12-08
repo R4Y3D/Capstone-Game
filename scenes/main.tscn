@@ -64,6 +64,7 @@ transform = Transform3D(0.473887, 0, 0, 0, 0.473887, 0, 0, 0, 0.473887, 0, 0, 0)
 
 [node name="Knight2" parent="." instance=ExtResource("5_s6hv4")]
 transform = Transform3D(0.473887, 0, 0, 0, 0.473887, 0, 0, 0, 0.473887, -1.44353, 0, 0)
+visible = false
 
 [node name="GateManager" type="Node3D" parent="."]
 script = ExtResource("6_wi0xa")

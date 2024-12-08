@@ -23,6 +23,9 @@ func _ready():
 	navigation_agent.path_desired_distance = 0.5
 	navigation_agent.target_desired_distance = 0.5
 
+	# Add the knight to the 'knight' group
+	add_to_group("knight")
+
 func _physics_process(delta: float):
 	if not leader:
 		# Play idle animation if no leader

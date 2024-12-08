@@ -4,6 +4,7 @@ extends CharacterBody3D
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $Skeleton_Mage/AnimationPlayer  # Update path if needed
+@onready var area: Area3D = $Area3D  # Ensure this matches the new Area3D node
 var leader: Node3D = null
 
 func _ready():
@@ -23,7 +24,14 @@ func _ready():
 	navigation_agent.path_desired_distance = 0.5
 	navigation_agent.target_desired_distance = 0.5
 
-	print("Skeleton is ready and following the leader:", leader.name)
+	print("Skeleton Mage is ready and following the leader:", leader.name)
+
+	# Add the skeleton mage to the enemy group
+	add_to_group("enemy")
+
+	# Connect collision detection
+	if area:
+		area.connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _physics_process(delta: float):
 	if not leader:
@@ -60,10 +68,16 @@ func _physics_process(delta: float):
 	# Use move_and_slide with velocity
 	move_and_slide()
 
-	# Check if the skeleton is moving or idle
-	if velocity.length() > 0:  # Skeleton is moving
-		if animation_player and animation_player.current_animation != "Walking_A":
+	# Check if the skeleton mage is moving or idle
+	if velocity.length() > 0:  # Skeleton Mage is moving
+		if animation_player and animation_player.current_animation != "Running_B":
 			animation_player.play("Running_B")
-	else:  # Skeleton is idle
+	else:  # Skeleton Mage is idle
 		if animation_player and animation_player.current_animation != "Walking_B":
 			animation_player.play("Walking_B")
+
+func _on_body_entered(body):
+	print("Collision detected with:", body.name)  # Debug to check what object is detected
+	if body.is_in_group("knight"):  # Check if the collided body is a Knight
+		print("Knight killed by Skeleton Mage")
+		body.queue_free()  # Removes the Knight from the scene
