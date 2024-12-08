@@ -60,7 +60,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38226, 0, 0)
 visible = false
 
 [node name="Knight" parent="." instance=ExtResource("5_s6hv4")]
-transform = Transform3D(0.473887, 0, 0, 0, 0.473887, 0, 0, 0, 0.473887, 0, 0, 0)
 
 [node name="Knight2" parent="." instance=ExtResource("5_s6hv4")]
 transform = Transform3D(0.473887, 0, 0, 0, 0.473887, 0, 0, 0, 0.473887, -1.44353, 0, 0)
@@ -73,5 +72,6 @@ gate_scene = ExtResource("7_un5mp")
 [node name="Spawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2415, 0, 0)
 script = ExtResource("10_5hu2a")
+knight_scene = ExtResource("5_s6hv4")
 mage_scene = ExtResource("9_ck2mo")
 minion_scene = ExtResource("8_i77ov")

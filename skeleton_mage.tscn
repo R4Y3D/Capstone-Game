@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://11y6pq5vvwqb" path="res://assets/enemies/characters/fbx/Skeleton_Mage.fbx" id="2_yf4ei"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l85cf"]
-radius = 0.630659
+radius = 0.898901
 height = 2.39426
 
 [node name="Skeleton_Mage" type="Node3D"]
@@ -17,12 +17,12 @@ script = ExtResource("1_7r6dp")
 [node name="Skeleton_Mage" parent="CharacterBody3D" instance=ExtResource("2_yf4ei")]
 transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 0.152177, 0.747704, 0.342057)
-shape = SubResource("CapsuleShape3D_l85cf")
-
 [node name="Area3D" type="Area3D" parent="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/Area3D"]
 transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 0.152177, 0.747704, 0.342057)
+shape = SubResource("CapsuleShape3D_l85cf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 0.160138, 0.747704, 0.342057)
 shape = SubResource("CapsuleShape3D_l85cf")

@@ -8,33 +8,40 @@ extends Node3D
 @export var max_speed: float = 50.0  # Maximum speed the gates can reach
 @export var speed_increase_interval: float = 5.0  # Time (in seconds) between speed increases
 
+@onready var spawner: Node3D = $"../Spawner"
+
 func _ready():
 	spawn_gates()  # Spawn the initial gates
 	start_speed_timer()  # Start the timer to increase speed
 
-func test(ispositive, effect_value):
-	prints('signal triggered', ispositive, effect_value)
-
-@onready var spawner: Node3D = $"../Spawner"
-
 func spawn_gates():
-	# Spawn a positive gate
+	# Spawn a positive gate (green gate)
 	var positive_gate = gate_scene.instantiate()
 	positive_gate.global_transform.origin = Vector3(spawn_distance, 1.0, gate_spacing)
 	positive_gate.is_positive = true
 	positive_gate.speed = gate_speed  # Pass the current global speed
 	add_child(positive_gate)
-	positive_gate.gate_activated.connect(spawner._spawn_Knight)
-	# Spawn a negative gate
+	positive_gate.gate_activated.connect(_on_positive_gate_activated)
+
+	# Spawn a negative gate (red gate)
 	var negative_gate = gate_scene.instantiate()
 	negative_gate.global_transform.origin = Vector3(spawn_distance, 1.0, -gate_spacing)
 	negative_gate.is_positive = false
 	negative_gate.speed = gate_speed  # Pass the current global speed
 	add_child(negative_gate)
+	negative_gate.gate_activated.connect(_on_negative_gate_activated)
 
 	# Link the two gates as partners
 	positive_gate.partner_gate = negative_gate
 	negative_gate.partner_gate = positive_gate
+
+func _on_positive_gate_activated(is_positive, effect_value):
+	if spawner:
+		spawner._spawn_Knight(true, effect_value)
+
+func _on_negative_gate_activated(is_positive, effect_value):
+	if spawner:
+		spawner._spawn_Knight(false, effect_value)
 
 func start_speed_timer():
 	# Create a timer to periodically increase speed

@@ -25,6 +25,7 @@ func _ready():
 
 	# Add the knight to the 'knight' group
 	add_to_group("knight")
+	print("Knight added to 'knight' group.")
 
 func _physics_process(delta: float):
 	if not leader:

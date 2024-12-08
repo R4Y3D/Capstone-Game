@@ -10,13 +10,14 @@ height = 2.39426
 [node name="Knight" type="Node3D"]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(0.474, 0, 0, 0, 0.474, 0, 0, 0, 0.474, 0, 0, 0)
 script = ExtResource("1_13nax")
 move_speed = 4.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="CharacterBody3D"]
 
 [node name="Knight" parent="CharacterBody3D" instance=ExtResource("1_vcc6c")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19863, -0.0872964)
