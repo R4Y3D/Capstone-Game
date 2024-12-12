@@ -1,7 +1,5 @@
 extends CharacterBody3D
-
 @export var move_speed: float = 3.0
-
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $Skeleton_Minion/AnimationPlayer
 @onready var area: Area3D = $Area3D  # Ensure this path matches the new Area3D node
@@ -14,21 +12,16 @@ func _ready():
 	if not leader:
 		print("No player found in the scene!")
 		return
-
 	# Verify the AnimationPlayer is found
 	if not animation_player:
 		print("AnimationPlayer not found!")
 		return
-
 	# Navigation setup
 	navigation_agent.path_desired_distance = 0.5
 	navigation_agent.target_desired_distance = 0.5
-
 	print("Skeleton is ready and following the leader:", leader.name)
-
 	# Add the skeleton to the enemy group
 	add_to_group("enemy")
-
 	# Connect collision detection
 	if area:
 		area.connect("body_entered", Callable(self, "_on_body_entered"))
@@ -67,7 +60,6 @@ func _physics_process(delta: float):
 	
 	# Use move_and_slide with velocity
 	move_and_slide()
-
 	# Check if the skeleton is moving or idle
 	if velocity.length() > 0:  # Skeleton is moving
 		if animation_player and animation_player.current_animation != "Walking_A":
@@ -79,5 +71,6 @@ func _physics_process(delta: float):
 func _on_body_entered(body):
 	print("Collision detected with:", body.name)  # Debug to check what object is detected
 	if body.is_in_group("knight"):  # Check if the collided body is a Knight
-		print("Knight killed by Skeleton")
+		print("Knight and Skeleton killed on contact")
 		body.queue_free()  # Removes the Knight from the scene
+		queue_free()  # Removes the Skeleton from the scene

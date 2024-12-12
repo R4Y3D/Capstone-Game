@@ -12,11 +12,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.302861, 0)
 script = ExtResource("1_qxyig")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="CharacterBody3D"]
-use_collision = true
 radius = 0.301975
 smooth_faces = false
 
 [node name="FollowPlayer" type="Marker3D" parent="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.115733, 0, 0, 0, 0.115733, 0, 0, 0, 0.115733, 0, 0, 0)
 shape = SubResource("SphereShape3D_42jyh")

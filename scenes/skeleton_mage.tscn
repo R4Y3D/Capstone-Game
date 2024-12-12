@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjst0ebcp6fje"]
 
-[ext_resource type="Script" path="res://Skeleton_Mage.gd" id="1_7r6dp"]
+[ext_resource type="Script" path="res://scenes/Skeleton_Mage.gd" id="1_7r6dp"]
 [ext_resource type="PackedScene" uid="uid://11y6pq5vvwqb" path="res://assets/enemies/characters/fbx/Skeleton_Mage.fbx" id="2_yf4ei"]
+
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l85cf"]
 radius = 0.898901

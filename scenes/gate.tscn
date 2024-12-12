@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfhhacfdfuoe2"]
 
-[ext_resource type="Script" path="res://gate.gd" id="1_7x7l7"]
+[ext_resource type="Script" path="res://scenes/gate.gd" id="1_7x7l7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p2mru"]
 
@@ -23,6 +23,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 6, 0, 0, 0)
 mesh = SubResource("BoxMesh_n1dxe")
 
 [node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.540282, 0, 0)
 text = "0"
+font_size = 120
+width = 300.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var move_speed: float = 3.0
+@export var gravity: float = 50.0  # Custom gravity value
 
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $Knight/AnimationPlayer  # Adjust path to match your scene hierarchy
@@ -33,7 +34,10 @@ func _physics_process(delta: float):
 		if animation_player:
 			animation_player.play("Running_A")
 		return
-	
+
+	# Apply gravity to the vertical velocity
+	velocity.y -= gravity * delta  # Accelerate downward due to gravity
+
 	var follow_target = leader.get_node("FollowPlayer")
 	if not follow_target:
 		print("FollowTarget node is missing!")
@@ -49,13 +53,11 @@ func _physics_process(delta: float):
 	
 	var direction = (next_position - current_position).normalized()
 	
-	# Look at the player while moving
-	look_at(Vector3(target_position.x, global_transform.origin.y, target_position.z), Vector3.UP)
-	
-	# Set the velocity as a vector
-	velocity = direction * move_speed
-	
-	# Use move_and_slide with velocity
+	# Set the horizontal velocity for movement
+	velocity.x = direction.x * move_speed
+	velocity.z = direction.z * move_speed
+
+	# Move the knight
 	move_and_slide()
 
 	# Check if the player is moving or not

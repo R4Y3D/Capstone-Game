@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1o164nt7auus"]
 
-[ext_resource type="Script" path="res://Skeleton.gd" id="1_jgmut"]
+[ext_resource type="Script" path="res://scenes/Skeleton.gd" id="1_jgmut"]
 [ext_resource type="PackedScene" uid="uid://bp6prjb0a1v6q" path="res://assets/enemies/characters/fbx/Skeleton_Minion.fbx" id="2_3ttmp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l85cf"]
