@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://du5bhnakh611"]
+[gd_scene load_steps=15 format=3 uid="uid://du5bhnakh611"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_hhrhj"]
 [ext_resource type="PackedScene" uid="uid://bsn3mj85vxh21" path="res://scenes/maps/HalloweenForest.tscn" id="2_gva57"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bfhhacfdfuoe2" path="res://scenes/gate.tscn" id="7_un5mp"]
 [ext_resource type="PackedScene" uid="uid://c1o164nt7auus" path="res://scenes/Skeleton.tscn" id="8_i77ov"]
 [ext_resource type="Script" path="res://scenes/spawner.gd" id="10_5hu2a"]
+[ext_resource type="PackedScene" uid="uid://ducm2wj0ncbdd" path="res://scenes/audio_stream_player.tscn" id="10_f2glx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s6phg"]
 
@@ -69,3 +70,5 @@ transform = Transform3D(0.98793, 0, 0, 0, 0.98793, 0, 0, 0, 0.98793, 21.2415, 0,
 script = ExtResource("10_5hu2a")
 knight_scene = ExtResource("5_s6hv4")
 minion_scene = ExtResource("8_i77ov")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("10_f2glx")]
