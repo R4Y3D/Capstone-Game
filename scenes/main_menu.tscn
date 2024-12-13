@@ -50,7 +50,8 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_nvost")
-text = "Play Again"
+text = "Play Game
+"
 
 [node name="tutorial" type="Button" parent="."]
 layout_mode = 1
