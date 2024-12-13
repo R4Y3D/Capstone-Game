@@ -59,7 +59,7 @@ func _physics_process(delta: float):
 
 	# Move the knight
 	move_and_slide()
-
+	
 	# Check if the player is moving or not
 	if velocity.length() > 0:  # Player is moving
 		if animation_player and animation_player.current_animation != "Running_B":

@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://8i7g8lln5j2s"]
+
+[ext_resource type="Script" path="res://scenes/gameover.gd" id="1_adl5t"]
+
+[node name="gameover" type="CanvasLayer"]
+script = ExtResource("1_adl5t")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 220.0
+offset_top = 483.0
+offset_right = -229.0
+offset_bottom = -728.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Game Over"
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 257.0
+offset_top = 580.0
+offset_right = -256.0
+offset_bottom = -637.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Play Again"

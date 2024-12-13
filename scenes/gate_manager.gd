@@ -25,8 +25,8 @@ func spawn_gates():
 	var increase_op = increase_ops[randi() % increase_ops.size()]
 	var decrease_op = decrease_ops[randi() % decrease_ops.size()]
 
-	var increase_value = randi() % 9 + 1
-	var decrease_value = randi() % 9 + 1
+	var increase_value = randi() % 5 + 1
+	var decrease_value = randi() % 5 + 1
 
 	# Instantiate gates
 	var left_gate = gate_scene.instantiate()
