@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://d33uglrblrper"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_a2po8"]
+[ext_resource type="Texture2D" uid="uid://bs4twssovkvix" path="res://menu_image.png" id="1_oauh6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jo0g4"]
+texture = ExtResource("1_oauh6")
+modulate_color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvost"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a2po8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jo0g4")
+
+[node name="play_game" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -33.0
+offset_right = 140.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_nvost")
+text = "Play Again"
+
+[node name="tutorial" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = 54.0
+offset_right = 125.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_nvost")
+text = "Tutorial
+"
+
+[connection signal="pressed" from="play_game" to="." method="on_play_game_pressed"]
+[connection signal="pressed" from="tutorial" to="." method="on_tutorial_pressed"]
