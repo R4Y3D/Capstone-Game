@@ -1,9 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://8i7g8lln5j2s"]
+[gd_scene load_steps=6 format=3 uid="uid://8i7g8lln5j2s"]
 
 [ext_resource type="Script" path="res://scenes/gameover.gd" id="1_adl5t"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_up8pr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3chh"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga2m0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sghme"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
 [node name="gameover" type="CanvasLayer"]
 script = ExtResource("1_adl5t")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15
@@ -15,6 +58,7 @@ offset_right = -229.0
 offset_bottom = -728.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.964706, 0.588235, 0.137255, 1)
 theme_override_font_sizes/font_size = 50
 text = "Game Over"
 
@@ -28,7 +72,10 @@ offset_right = -256.0
 offset_bottom = -637.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_up8pr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_o3chh")
 text = "Play Again"
 
 [node name="quit_button" type="Button" parent="."]
@@ -41,7 +88,10 @@ offset_right = -300.0
 offset_bottom = -538.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_ga2m0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sghme")
 text = "Quit"
 
 [connection signal="pressed" from="play_again_button" to="." method="on_play_again_pressed"]
