@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scenes/tutorial.gd" id="1_v5rbo"]
 [ext_resource type="Texture2D" uid="uid://bs4twssovkvix" path="res://assets/menu_image.png" id="1_xpl27"]
 
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdjii"]
 texture = ExtResource("1_xpl27")
 modulate_color = Color(0.327299, 0.327299, 0.327299, 1)
@@ -42,23 +41,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -359.0
+offset_top = -171.0
+offset_right = 359.0
+offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "Mechanics:
-Use WASD to move, the gates
-change the number of knights you 
-have based on the mathematical 
-expression. Skeletons kill knights on
+theme_override_font_sizes/font_size = 25
+text = "controls:
+Use A,D or ←,→ to move
+
+Mechanics:
+The gates change the number of knights you 
+have based on the mathematical expression. 
+Skeletons kill knights on
 contact.
 
 Objective:
-Keep knight alive for as long as
-possible!"
+Keep your knights alive for as long as possible!"
+horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 1

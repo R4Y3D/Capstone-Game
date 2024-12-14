@@ -1,6 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://8i7g8lln5j2s"]
+[gd_scene load_steps=8 format=3 uid="uid://8i7g8lln5j2s"]
 
 [ext_resource type="Script" path="res://scenes/gameover.gd" id="1_adl5t"]
+[ext_resource type="Texture2D" uid="uid://wqduoblx8ub3" path="res://assets/death.png" id="2_nqo0n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i6xd"]
+bg_color = Color(0.158019, 0, 0.0639615, 0.772549)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_up8pr"]
 bg_color = Color(1, 1, 1, 1)
@@ -47,18 +51,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 1.0
 offset_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4i6xd")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 220.0
-offset_top = 483.0
-offset_right = -229.0
-offset_bottom = -728.0
+offset_left = 222.0
+offset_top = 333.0
+offset_right = -227.0
+offset_bottom = -878.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.964706, 0.588235, 0.137255, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 5
 theme_override_font_sizes/font_size = 50
 text = "Game Over"
 
@@ -66,10 +73,10 @@ text = "Game Over"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 257.0
-offset_top = 580.0
-offset_right = -256.0
-offset_bottom = -637.0
+offset_left = 258.0
+offset_top = 760.0
+offset_right = -255.0
+offset_bottom = -457.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -82,10 +89,10 @@ text = "Play Again"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 291.0
-offset_top = 682.0
-offset_right = -300.0
-offset_bottom = -538.0
+offset_left = 292.0
+offset_top = 862.0
+offset_right = -299.0
+offset_bottom = -358.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -93,6 +100,10 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = SubResource("StyleBoxFlat_ga2m0")
 theme_override_styles/normal = SubResource("StyleBoxFlat_sghme")
 text = "Quit"
+
+[node name="death" type="Sprite2D" parent="."]
+position = Vector2(361, 562)
+texture = ExtResource("2_nqo0n")
 
 [connection signal="pressed" from="play_again_button" to="." method="on_play_again_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]

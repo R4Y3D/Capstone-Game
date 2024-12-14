@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_a2po8"]
 [ext_resource type="Texture2D" uid="uid://bs4twssovkvix" path="res://assets/menu_image.png" id="1_oauh6"]
 
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jo0g4"]
 texture = ExtResource("1_oauh6")
 modulate_color = Color(0.2484, 0.2484, 0.2484, 1)

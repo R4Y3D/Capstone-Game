@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://du5bhnakh611"]
+[gd_scene load_steps=19 format=3 uid="uid://du5bhnakh611"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_hhrhj"]
 [ext_resource type="PackedScene" uid="uid://bsn3mj85vxh21" path="res://scenes/maps/HalloweenForest.tscn" id="2_gva57"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://ducm2wj0ncbdd" path="res://scenes/audio_stream_player.tscn" id="10_f2glx"]
 [ext_resource type="AudioStream" uid="uid://c5ay7ro0jcfjq" path="res://assets/pop.mp3" id="11_2us6j"]
 [ext_resource type="AudioStream" uid="uid://b35mra0vyly3q" path="res://assets/hurt.mp3" id="12_0xalu"]
+[ext_resource type="PackedScene" uid="uid://8i7g8lln5j2s" path="res://scenes/gameover.tscn" id="13_gqq6b"]
+[ext_resource type="AudioStream" uid="uid://d0ajv0if7e0pu" path="res://assets/gameoversfx.mp3" id="13_n4hg4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s6phg"]
 
@@ -81,3 +83,10 @@ stream = ExtResource("11_2us6j")
 
 [node name="hurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_0xalu")
+
+[node name="overSfx" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("13_n4hg4")
+
+[node name="gameover" parent="." instance=ExtResource("13_gqq6b")]
+process_mode = 3

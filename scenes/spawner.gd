@@ -1,7 +1,7 @@
 extends Node3D
 
-@export var knight_scene: PackedScene  # Drag your Knight.tscn here
-@export var minion_scene: PackedScene  # Drag the Skeleton_Minion.tscn here
+@export var knight_scene: PackedScene
+@export var minion_scene: PackedScene
 @export var spawn_interval: float = 5.0
 @export var skeleton_spawn_interval: float = 5.0
 @export var max_spawn_count: int = 100
@@ -9,17 +9,23 @@ extends Node3D
 @export var spawn_back_offset: float = 25.0
 @export var initial_skeletons_per_wave: int = 1
 @export var skeleton_wave_increase: int = 2
-@export var game_over_scene: String = "res://scenes/gameover.tscn"
 
 var current_spawn_count: int = 0
 var current_knight_count: int = 1
 var skeletons_per_wave: int
 @onready var player_node = $"../Player"
 @onready var pop_sound = $"../pop"  # Reference to the AudioStreamPlayer node
+@onready var gameover_node = $"../gameover"  # Reference to the gameover scene instance in the main scene
+@onready var game_music = $"../gameMusic"  # Reference to the current game music AudioStreamPlayer
+@onready var over_sfx = $"../overSfx"  # Reference to the game over AudioStreamPlayer
 
 func _ready():
 	add_to_group("spawner")
 	skeletons_per_wave = initial_skeletons_per_wave
+
+	# Hide the gameover node initially
+	if gameover_node:
+		gameover_node.visible = false
 
 	# Start the skeleton spawn timer
 	var skeleton_timer = Timer.new()
@@ -46,14 +52,12 @@ func process_interaction(is_positive: bool, effect_value: int, operation: String
 func _add_knights(count: int):
 	for i in range(count):
 		_spawn_knight()
-		# Play pop sound for each knight spawned
 		_play_pop_sound()
 
 func _multiply_knights(factor: int):
 	var spawn_count = current_knight_count * (factor - 1)
 	for i in range(spawn_count):
 		_spawn_knight()
-		# Play pop sound for each knight spawned
 		_play_pop_sound()
 
 func _remove_knights(count: int):
@@ -103,7 +107,6 @@ func _spawn_knight():
 		print(current_knight_count)
 
 func _play_pop_sound():
-	# Stops and replays the pop sound for every knight spawned
 	if pop_sound.is_playing():
 		pop_sound.stop()
 	pop_sound.play()
@@ -117,7 +120,6 @@ func _spawn_skeleton_wave():
 		print("Error: Player node not found.")
 		return
 
-	# Spawn multiple skeletons in this wave
 	for i in range(skeletons_per_wave):
 		var spawn_position = player_node.global_transform.origin
 		spawn_position.x += randf_range(-3.0, 3.0)
@@ -130,7 +132,6 @@ func _spawn_skeleton_wave():
 
 			current_spawn_count += 1
 
-	# Increase the number of skeletons for the next wave
 	skeletons_per_wave += skeleton_wave_increase
 
 func _check_game_over():
@@ -139,7 +140,18 @@ func _check_game_over():
 		_show_game_over_screen()
 
 func _show_game_over_screen():
-	if game_over_scene:
-		get_tree().change_scene_to_file(game_over_scene)
+	# Stop game music and play game over sound
+	if game_music and game_music.is_playing():
+		game_music.stop()
+
+	if over_sfx:
+		over_sfx.play()
+
+	# Pause the entire game
+	get_tree().paused = true
+
+	# Show the gameover node
+	if gameover_node:
+		gameover_node.visible = true
 	else:
-		print("Error: Game Over scene not set!")
+		print("Error: Gameover node not found!")\
