@@ -4,14 +4,15 @@ extends Node3D
 @export var minion_scene: PackedScene
 @export var spawn_interval: float = 5.0
 @export var skeleton_spawn_interval: float = 5.0
-@export var max_spawn_count: int = 100
+@export var max_knights: int = 50  # Maximum knights allowed
+@export var max_skeletons: int = 30  # Maximum skeletons allowed
 @export var spawn_height_offset: float = 2.0
 @export var spawn_back_offset: float = 25.0
 @export var initial_skeletons_per_wave: int = 1
 @export var skeleton_wave_increase: int = 2
 
-var current_spawn_count: int = 0
-var current_knight_count: int = 1
+var current_knight_count: int = 0  # Track the current knight count
+var current_skeleton_count: int = 0  # Track the current skeleton count
 var skeletons_per_wave: int
 @onready var player_node = $"../Player"
 @onready var pop_sound = $"../pop"  # Reference to the AudioStreamPlayer node
@@ -70,8 +71,6 @@ func _remove_knights(count: int):
 		# Decrement counts immediately
 		if current_knight_count > 0:
 			current_knight_count -= 1
-		if current_spawn_count > 0:
-			current_spawn_count -= 1
 
 		print("Knight removed. Current knight count: ", current_knight_count)
 
@@ -82,7 +81,8 @@ func _divide_knights(factor: int):
 	_remove_knights(knights_to_remove)
 
 func _spawn_knight():
-	if current_spawn_count >= max_spawn_count:
+	if current_knight_count >= max_knights:
+		print("Max knights reached.")
 		return
 
 	if player_node == null:
@@ -102,7 +102,6 @@ func _spawn_knight():
 		# Add the knight to the "knight" group
 		knight.add_to_group("knight")
 
-		current_spawn_count += 1
 		current_knight_count += 1
 		print(current_knight_count)
 
@@ -112,8 +111,11 @@ func _play_pop_sound():
 	pop_sound.play()
 
 func _spawn_skeleton_wave():
-	if current_spawn_count >= max_spawn_count:
-		print("Max spawn count reached.")
+	# Update current skeleton count by checking the number of active skeletons
+	current_skeleton_count = get_tree().get_nodes_in_group("enemy").size()
+
+	if current_skeleton_count >= max_skeletons:
+		print("Max skeletons reached.")
 		return
 
 	if player_node == null:
@@ -121,6 +123,9 @@ func _spawn_skeleton_wave():
 		return
 
 	for i in range(skeletons_per_wave):
+		if current_skeleton_count >= max_skeletons:
+			break
+
 		var spawn_position = player_node.global_transform.origin
 		spawn_position.x += randf_range(-3.0, 3.0)
 		spawn_position.z += randf_range(-4.0, 4.0)
@@ -130,7 +135,8 @@ func _spawn_skeleton_wave():
 			skeleton.global_transform.origin = spawn_position
 			add_child(skeleton)
 
-			current_spawn_count += 1
+			current_skeleton_count += 1
+			print("Skeleton spawned. Current skeleton count: ", current_skeleton_count)
 
 	skeletons_per_wave += skeleton_wave_increase
 
@@ -154,4 +160,4 @@ func _show_game_over_screen():
 	if gameover_node:
 		gameover_node.visible = true
 	else:
-		print("Error: Gameover node not found!")\
+		print("Error: Gameover node not found!")
