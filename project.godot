@@ -13,14 +13,13 @@ config_version=5
 config/name="Capstone Game"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/death.png"
 
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
 window/size/resizable=false
-window/size/borderless=true
 
 [input]
 
