@@ -15,6 +15,7 @@ var current_spawn_count: int = 0
 var current_knight_count: int = 1
 var skeletons_per_wave: int
 @onready var player_node = $"../Player"
+@onready var pop_sound = $"../pop"  # Reference to the AudioStreamPlayer node
 
 func _ready():
 	add_to_group("spawner")
@@ -45,11 +46,15 @@ func process_interaction(is_positive: bool, effect_value: int, operation: String
 func _add_knights(count: int):
 	for i in range(count):
 		_spawn_knight()
+		# Play pop sound for each knight spawned
+		_play_pop_sound()
 
 func _multiply_knights(factor: int):
 	var spawn_count = current_knight_count * (factor - 1)
 	for i in range(spawn_count):
 		_spawn_knight()
+		# Play pop sound for each knight spawned
+		_play_pop_sound()
 
 func _remove_knights(count: int):
 	var knights_in_group = get_tree().get_nodes_in_group("knight")
@@ -96,6 +101,12 @@ func _spawn_knight():
 		current_spawn_count += 1
 		current_knight_count += 1
 		print(current_knight_count)
+
+func _play_pop_sound():
+	# Stops and replays the pop sound for every knight spawned
+	if pop_sound.is_playing():
+		pop_sound.stop()
+	pop_sound.play()
 
 func _spawn_skeleton_wave():
 	if current_spawn_count >= max_spawn_count:

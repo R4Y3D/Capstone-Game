@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var area: Area3D = $Area3D
 
 var leader: Node3D = null
-var spawner_node: Node = null  # We'll store a reference to the spawner node here
+var spawner_node: Node = null  # Reference to the spawner node
 
 func _ready():
 	# Automatically find the player
@@ -70,13 +70,22 @@ func _physics_process(delta: float):
 func _on_body_entered(body):
 	if body.is_in_group("knight"):
 		print("Knight and Skeleton killed on contact")
-		body.queue_free() # Removes the Knight
+
+		# Play the hurt sound effect in the main scene
+		var main_scene = get_tree().root.get_child(0)  # Assuming main scene is the first child
+		if main_scene.has_node("hurt"):  # Replace "hurt" with the correct path to the AudioStreamPlayer in the main scene
+			var hurt_sound = main_scene.get_node("hurt")
+			if hurt_sound:
+				hurt_sound.stop()  # Stop any currently playing sound
+				hurt_sound.play()  # Play the hurt sound
+
+		body.queue_free()  # Removes the Knight
 
 		# Decrement the knight count in the spawner script
 		if spawner_node:
 			spawner_node.current_knight_count -= 1
-			# Also call _check_game_over if it's accessible and needed
+			# Call _check_game_over if it's accessible
 			if "_check_game_over" in spawner_node:
 				spawner_node._check_game_over()
 
-		queue_free() # Removes the Skeleton
+		queue_free()  # Removes the Skeleton
